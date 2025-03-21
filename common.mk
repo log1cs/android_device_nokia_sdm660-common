@@ -182,7 +182,7 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    fstab.qcom\
+    fstab.qcom \
     fstab.qcom.ramdisk
 
 PRODUCT_PACKAGES += \
@@ -190,6 +190,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
+    init.recovery.qcom.rc \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
