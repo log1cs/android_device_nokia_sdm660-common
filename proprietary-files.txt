@@ -302,7 +302,6 @@ vendor/lib64/librs_adreno.so|c84431c31efd21b30d95ebe9ea3dc4792f0de4ac
 vendor/lib64/librs_adreno_sha1.so|06535b728885e2bf161b1cca48e8e5928925310a
 
 # Graphics (HDR) - from PL2_sprout - QKQ1.190828.002
-vendor/lib/libhdr_tm.so|8d253c28c1fd976ac009088e36d483c16566f9a5
 vendor/lib64/libhdr_tm.so|1e74de5b505c8f742f1fb0379725ec9f5fd53282
 
 # Graphics (SDM) - from PL2_sprout - QKQ1.190828.002
@@ -435,7 +434,6 @@ vendor/lib/libdsutils.so
 vendor/lib/libidl.so
 vendor/lib/libminkdescriptor.so
 vendor/lib/libminksocket.so
-vendor/lib/libqcc_file_agent.so
 vendor/lib/libqcci_legacy.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
@@ -473,6 +471,7 @@ vendor/lib64/libqmi_legacy.so
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
 vendor/bin/qseecomd
 vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
+vendor/lib/libdisplayconfig.qti.so
 vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
@@ -506,6 +505,8 @@ vendor/etc/data/netmgr_config.xml
 vendor/etc/Diag.cfg
 vendor/etc/init/qcrild.rc
 vendor/lib/libmdmdetect.so
+vendor/lib/libqrtr.so
+vendor/lib/libqcbor.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/liblqe.so
@@ -662,8 +663,17 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 # UBWC
 vendor/lib/libstreamparser.so
 vendor/lib/libUBWC.so
+vendor/lib/libvideoutils.so
 
 # VPP
+vendor/lib/libvpphvx.so
+vendor/lib/libvpplibrary.so
+vendor/lib/libmmsw_detail_enhancement.so
+vendor/lib/libmmsw_math.so
+vendor/lib/libmmsw_opencl.so
+vendor/lib/libmmsw_platform.so
+vendor/lib/vendor.qti.hardware.vpp@1.1.so
+vendor/lib/vendor.qti.hardware.vpp@1.2.so
 vendor/lib64/libvpphvx.so
 vendor/lib64/libvpplibrary.so
 vendor/lib64/libmmsw_detail_enhancement.so
@@ -675,3 +685,8 @@ vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 
 # WiFi
 vendor/bin/cnss-daemon
+
+# Wi-Fi Display
+vendor/lib/libwfdcommonutils_proprietary.so
+vendor/lib/libwfddisplayconfig_proprietary.so
+vendor/lib/libwfdmmservice.so
