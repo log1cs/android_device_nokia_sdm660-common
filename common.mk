@@ -67,7 +67,8 @@ $(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
-    camera.sdm660:32
+    camera.sdm660:32 \
+    get_offsets
 
 # Cgroup and task_profiles
 PRODUCT_COPY_FILES += \
