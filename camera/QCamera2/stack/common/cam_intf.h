@@ -985,7 +985,7 @@ typedef struct {
     INCLUDE(CAM_INTF_PARM_WHITE_BALANCE,                int32_t,                     1);
     INCLUDE(CAM_INTF_META_AWB_REGIONS,                  cam_area_t,                  1);
     INCLUDE(CAM_INTF_META_AWB_STATE,                    uint32_t,                    1);
-    INCLUDE(CAM_INTF_META_AWB_CONVERGENCE_SPEED,        float,                       1);
+    uint8_t pad1[4];
     INCLUDE(CAM_INTF_META_BLACK_LEVEL_LOCK,             uint32_t,                    1);
     INCLUDE(CAM_INTF_META_MODE,                         uint32_t,                    1);
     INCLUDE(CAM_INTF_META_EDGE_MODE,                    cam_edge_application_t,      1);
@@ -998,8 +998,9 @@ typedef struct {
     INCLUDE(CAM_INTF_META_LENS_FILTERDENSITY,           float,                       1);
     INCLUDE(CAM_INTF_META_LENS_FOCAL_LENGTH,            float,                       1);
     INCLUDE(CAM_INTF_META_LENS_FOCUS_DISTANCE,          float,                       1);
-    INCLUDE(CAM_INTF_META_FOCUS_VALUE,                  float,                       1);
-    INCLUDE(CAM_INTF_META_SPOT_LIGHT_DETECT,            uint8_t,                     1);
+    INCLUDE(CAM_INTF_FIH_RESERVED_2,                    uint8_t,                     4);
+    INCLUDE(CAM_INTF_META_AWB_CONVERGENCE_SPEED,        float,                       1);
+    INCLUDE(CAM_INTF_META_FOCUS_VALUE,                  uint8_t,                     1);
     INCLUDE(CAM_INTF_META_LENS_FOCUS_RANGE,             float,                       2);
     INCLUDE(CAM_INTF_META_LENS_STATE,                   cam_af_lens_state_t,         1);
     INCLUDE(CAM_INTF_META_LENS_OPT_STAB_MODE,           cam_ois_mode_t,              1);
@@ -1022,6 +1023,7 @@ typedef struct {
     INCLUDE(CAM_INTF_META_STATS_SHARPNESS_MAP,          cam_sharpness_map_t,         3);
     INCLUDE(CAM_INTF_META_TONEMAP_CURVES,               cam_rgb_tonemap_curves,      1);
     INCLUDE(CAM_INTF_META_LENS_SHADING_MAP,             cam_lens_shading_map_t,      1);
+    uint8_t pad2[4];
     INCLUDE(CAM_INTF_META_AEC_INFO,                     cam_3a_params_t,             1);
     INCLUDE(CAM_INTF_META_SENSOR_INFO,                  cam_sensor_params_t,         1);
     INCLUDE(CAM_INTF_META_EXIF_DEBUG_AE,                cam_ae_exif_debug_t,         1);
@@ -1062,6 +1064,7 @@ typedef struct {
     INCLUDE(CAM_INTF_META_DCRF,                         cam_dcrf_result_t,        1);
     INCLUDE(CAM_INTF_PARM_SYNC_DC_PARAMETERS,           uint32_t,                  1);
     INCLUDE(CAM_INTF_META_AF_FOCUS_POS,                 cam_af_focus_pos_t, 1);
+    uint8_t pad3[2056];
 
     /* HAL1 specific */
     /* read only */

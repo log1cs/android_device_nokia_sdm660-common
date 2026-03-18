@@ -14437,8 +14437,8 @@ uint8_t QCameraParameters::getMobicatMask()
  *==========================================================================*/
 bool QCameraParameters::sendStreamConfigInfo(cam_stream_size_info_t &stream_config_info) {
     int32_t rc = NO_ERROR;
-    cam_sensor_config_t sensor_dim_main = {0,0,0};
-    cam_sensor_config_t sensor_dim_aux  = {0,0,0};
+    cam_sensor_config_t sensor_dim_main{};
+    cam_sensor_config_t sensor_dim_aux{};
 
     if (isDualCamera()) {
         // Get the sensor output dimensions for main and aux cameras.

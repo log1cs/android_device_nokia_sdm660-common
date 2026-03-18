@@ -89,7 +89,7 @@
 #define MAX_AF_STATS_DATA_SIZE  1000
 #define MAX_ASD_STATS_DATA_SIZE 1000
 
-#define MAX_CAPTURE_BATCH_NUM 120
+#define MAX_CAPTURE_BATCH_NUM 32
 
 #define TUNING_DATA_VERSION        6
 #define TUNING_SENSOR_DATA_MAX     0x10000 /*(need value from sensor team)*/
@@ -1704,6 +1704,7 @@ typedef struct {
     int32_t est_snap_iso_value;
     uint32_t est_snap_luma;
     uint32_t est_snap_target;
+    uint8_t pad[84];
 } cam_3a_params_t;
 
 typedef struct {
@@ -2448,6 +2449,8 @@ typedef enum {
     CAM_INTF_PARM_MANUAL_CAPTURE_TYPE,
     /*AF state change detected by AF module*/
     CAM_INTF_AF_STATE_TRANSITION,
+    /* FIH reserved */
+    CAM_INTF_FIH_RESERVED_1,
     /* face recognition */
     CAM_INTF_META_FACE_RECOG,
     /* face blink detection */
@@ -2489,6 +2492,8 @@ typedef enum {
     CAM_INTF_META_IR_MODE,
     /* AEC,AWB Speed control enabled */
     CAM_INTF_META_AEC_CONVERGENCE_SPEED,
+    /* FIH reserved */
+    CAM_INTF_FIH_RESERVED_2,
     CAM_INTF_META_AWB_CONVERGENCE_SPEED,
     /*Focus value output from af core*/
     CAM_INTF_META_FOCUS_VALUE,
@@ -3178,7 +3183,6 @@ typedef enum {
 typedef struct {
     int32_t width;
     int32_t height;
-    int32_t opClock;
 } cam_sensor_config_t;
 
 typedef struct {
