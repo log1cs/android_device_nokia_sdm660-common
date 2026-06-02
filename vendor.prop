@@ -106,7 +106,7 @@ vendor.qcom.bluetooth.soc=cherokee
 # Camera
 camera.disable_zsl_mode=1
 persist.vendor.camera.fdvideo=1
-vendor.camera.aux.packagelist=com.hmdglobal.camera2,com.evenwell.fqc,com.tools.alt,com.fihtdc.fap,org.codeaurora.snapcam
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,org.lineageos.aperture,org.lineageos.aperture.dev
 vendor.camera.c2d.rotation=1
 
 # Dalvik dex2oat
